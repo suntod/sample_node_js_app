@@ -4,31 +4,61 @@ const app = express();
 app.use(express.json());
 
 var movies = [
-    {
-        id: 0,
-        name: "The Flash",
-        type: "series",
-        isPublished: false
+{
+  "postDate": "2020-07-15",
+  "effectiveDate": "2020-07-16",
+  "unit": "Baht/Litre",
+  "oilPrice": [
+	{
+      "id": "hipremiumdiesel-s",
+      "updatedPrice": 26.66,
+	  "variance": -0.30
     },
-    {
-        id: 1,
-        name: "Arrow",
-        type: "series",
-        isPublished: true
+	{
+      "id": "hidiesel-s",
+      "updatedPrice": 22.19,
+	  "variance": -0.30
     },
-    {
-        id: 2,
-        name: "Harry Potter",
-        type: "movie",
-        isPublished: false
-    }
+	{
+      "id": "hidiesel-s-b10",
+      "updatedPrice": 19.19,
+	  "variance": -0.30
+    },
+	{
+      "id": "hidiesel-b20s",
+      "updatedPrice": 18.94,
+	  "variance": -0.30
+    },
+	{
+      "id": "gasohol-e85s",
+      "updatedPrice": 17.99,
+	  "variance": -0.15
+    },
+	{
+      "id": "gasohol-e20s",
+      "updatedPrice": 20.04,
+	  "variance": -0.30
+    },
+	{
+      "id": "gasohol-91s",
+      "updatedPrice": 21.28,
+	  "variance": -0.30
+    },
+	{
+      "id": "gasohol-95s",
+      "updatedPrice": 21.55,
+	  "variance": -0.30
+    },
+  ],
+  "publishedBy": BCP/MPD
+}
 ];
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello Fucking World</h1>');
 });
 
-app.get('/api/movies', (req, res) => {
+app.get('/api/bcpoilprice', (req, res) => {
     res.send(movies);
 });
 
