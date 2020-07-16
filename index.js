@@ -1,14 +1,11 @@
-var express=require("express");
-var app=express();
-var port=process.env.PORT || 3000;
-var path    = require("path");
+const express = require('express');
 
-app.use(express.static('public'));
+const app = express();
+app.use(express.json());
 
-app.get("/",(req,res)=>{
-
-    res.sendFile(path.join(__dirname+'/public/index.html'));
-
+app.get('/', (req, res) => {
+    res.send('<h1>Hello Fucking World</h1>');
 });
 
-app.listen(port);
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log(`Listening on port${port}...`) );
