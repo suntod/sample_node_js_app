@@ -55,7 +55,7 @@ var movies = [
 ];
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello Fucking World</h1>');
+    res.send('<h1>Hello World</h1>');
 });
 
 app.get('/api/bcpoilprice', (req, res) => {
