@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-var movies = [
+var oilprice = [
 	{
 	  "postDate": "2020-07-15",
 	  "effectiveDate": "2020-07-16",
@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/bcpoilprice', (req, res) => {
-    res.send(movies);
+    res.send(oilprice);
 });
 
 const port = process.env.PORT || 3000
