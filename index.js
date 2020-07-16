@@ -10,45 +10,45 @@ var oilprice = {
 	  "publishedBy": "BCP/MPD",
 	  "oilPrice": [
 		{
-		  "id": "hipremiumdiesel-s",
+		  "id": "Hi Premium Diesel S",
 		  "updatedPrice": 26.66,
 		  "variance": -0.30
 		},
 		{
-		  "id": "hidiesel-s",
+		  "id": "Diesel S",
 		  "updatedPrice": 22.19,
 		  "variance": -0.30
 		},
 		{
-		  "id": "hidiesel-s-b10",
+		  "id": "Hi Diesel S B10",
 		  "updatedPrice": 19.19,
 		  "variance": -0.30
 		},
 		{
-		  "id": "hidiesel-b20s",
+		  "id": "Hi Diesel B20 S",
 		  "updatedPrice": 18.94,
 		  "variance": -0.30
 		},
 		{
-		  "id": "gasohol-e85s",
+		  "id": "Gasohol E85 S EVO",
 		  "updatedPrice": 17.99,
 		  "variance": -0.15
 		},
 		{
-		  "id": "gasohol-e20s",
+		  "id": "Gasohol E20 S EVO",
 		  "updatedPrice": 20.04,
 		  "variance": -0.30
 		},
 		{
-		  "id": "gasohol-91s",
+		  "id": "Gasohol 95 S EVO",
 		  "updatedPrice": 21.28,
 		  "variance": -0.30
 		},
 		{
-		  "id": "gasohol-95s",
+		  "id": "Gasohol 95 S EVO",
 		  "updatedPrice": 21.55,
 		  "variance": -0.30
-		},
+		}
 	  ]
 	};
 
