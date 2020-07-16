@@ -4,24 +4,12 @@ const app = express();
 app.use(express.json());
 
 var movies = [
-    {
-        id: 0,
-        name: "The Flash",
-        type: "series",
-        isPublished: false
-    },
-    {
-        id: 1,
-        name: "Arrow",
-        type: "series",
-        isPublished: true
-    },
-    {
-        id: 2,
-        name: "Harry Potter",
-        type: "movie",
-        isPublished: false
-    }
+	{
+	  "postDate": "2020-07-15",
+	  "effectiveDate": "2020-07-16",
+	  "unit": "Baht/Litre",
+	  "publishedBy": "BCP/MPD"
+	}
 ];
 
 app.get('/', (req, res) => {
