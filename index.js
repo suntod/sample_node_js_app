@@ -3,12 +3,13 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-var oilprice = {
+var oilpricelist = {
+	{
 	  "postDate": "2020-07-15",
 	  "effectiveDate": "2020-07-16",
 	  "unit": "Baht/Litre",
 	  "publishedBy": "BCP/MPD",
-	  "oilPrice": [
+	  "oilprice": [
 		{
 		  "id": "Hi Premium Diesel S",
 		  "updatedPrice": 26.66,
@@ -50,6 +51,7 @@ var oilprice = {
 		  "variance": -0.30
 		}
 	  ]
+	}
 	};
 
 app.get('/', (req, res) => {
@@ -57,7 +59,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/bcpoilprice', (req, res) => {
-    res.send(oilprice);
+    res.send(oilpricelist);
+});
+
+app.post('/api/bcpoilprice', (req, res) => {
+	const oilpricenew = {
+	}
+	oilpricelist.push(oilpricenew);
+	res.send(oilpricelist);
+	
 });
 
 const port = process.env.PORT || 3000
