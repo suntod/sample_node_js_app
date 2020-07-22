@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-var oilpricelist = {
-	
+var oilpricelist = [
+	{
 	  "postDate": "2020-07-15",
 	  "effectiveDate": "2020-07-16",
 	  "unit": "Baht/Litre",
@@ -51,8 +51,8 @@ var oilpricelist = {
 		  "variance": -0.30
 		}
 	  ]
-	
-	};
+	}
+	];
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello World</h1>');
