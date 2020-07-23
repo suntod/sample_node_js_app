@@ -3,12 +3,13 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-var oilprice = {
+var oilpricelist = [
+	{
 	  "postDate": "2020-07-15",
 	  "effectiveDate": "2020-07-16",
 	  "unit": "Baht/Litre",
 	  "publishedBy": "BCP/MPD",
-	  "oilPrice": [
+	  "oilprice": [
 		{
 		  "id": "Hi Premium Diesel S",
 		  "updatedPrice": 26.66,
@@ -50,14 +51,69 @@ var oilprice = {
 		  "variance": -0.30
 		}
 	  ]
-	};
+	}
+	];
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello World</h1>');
 });
 
 app.get('/api/bcpoilprice', (req, res) => {
-    res.send(oilprice);
+    res.send(oilpricelist);
+});
+
+app.post('/api/bcpoilprice', (req, res) => {
+	const oilpricenew = {
+	  "postDate": "2020-07-22",
+	  "effectiveDate": "2020-07-23",
+	  "unit": "Baht/Litre",
+	  "publishedBy": "BCP/MPD",
+	  "oilprice": [
+		{
+		  "id": "Hi Premium Diesel S",
+		  "updatedPrice": 27.06,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Diesel S",
+		  "updatedPrice": 22.59,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Hi Diesel S B10",
+		  "updatedPrice": 19.59,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Hi Diesel B20 S",
+		  "updatedPrice": 19.34,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Gasohol E85 S EVO",
+		  "updatedPrice": 18.19,
+		  "variance": 0.20
+		},
+		{
+		  "id": "Gasohol E20 S EVO",
+		  "updatedPrice": 20.44,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Gasohol 95 S EVO",
+		  "updatedPrice": 21.68,
+		  "variance": 0.40
+		},
+		{
+		  "id": "Gasohol 95 S EVO",
+		  "updatedPrice": 21.95,
+		  "variance": 0.40
+		}
+	  ]
+	}
+	oilpricelist.push(oilpricenew);
+	res.send(oilpricelist);
+	
 });
 
 const port = process.env.PORT || 3000
