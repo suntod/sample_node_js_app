@@ -117,7 +117,7 @@ app.post('/api/bcpoilprice', (req, res) => {
 });
 
 app.post('/api/testsendsms', (req, res) => {
-    res.send('<h1>Hello SMS</h1>');
+    res.send(req.body);
 });
 
 const port = process.env.PORT || 3000
