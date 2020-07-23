@@ -118,7 +118,7 @@ app.post('/api/bcpoilprice', (req, res) => {
 
 app.post('/api/testsendsms', (req, res) => {
     //res.send('<h1>Hello SMS</h1>');
-	res.send(Date());
+	res.send("Current Date is " + Date());
 });
 
 const port = process.env.PORT || 3000
