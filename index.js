@@ -123,7 +123,7 @@ app.post('/api/bcpoilprice', (req, res) => {
 
 app.post('/api/testsendsms', (req, res) => {
     res.send('<h1>Hello SMS</h1>');
-	res.send("Current Date is " + Date());
+	res.send('Current Date is ' + Date());
 	res.send(req.body.firstName);
 });
 
