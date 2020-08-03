@@ -1,11 +1,6 @@
 const express = require('express');
-
-//const xml2js = require('xml2js');
-const fs = require('fs');
-//const xmlparser = require("express-xml-bodyparser");
-//const parser = new xml2js.Parser({ attrkey: "ATTR" });
-
 const app = express();
+
 app.use(express.json());
 
 var oilpricelist = [
